@@ -10,8 +10,6 @@ public class ListaRandom {
 		//Se crea un elemento random
 		Random random = new Random();
 		//Aquí se empieza a hacer un shuffle a los datos
-		//Parte del codigo obtenido de un comentario random de StackOverFlow de
-		//https://stackoverflow.com/questions/40494624/random-shuffling-an-array-of-integers-in-java
 		for (int i = 0; i < lista.length; ++i) {
 			   int indice = random.nextInt(lista.length - i);
 			   int temporal = lista[lista.length - 1 - i];
