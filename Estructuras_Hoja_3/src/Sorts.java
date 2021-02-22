@@ -1,9 +1,9 @@
-	import java.util.Arrays;
+
 import java.util.Vector; 
 
 public class Sorts {
 
-	//Se usará dentro de los sorts
+	//Se usarï¿½ dentro de los sorts
 	public static void swap(int data[], int i, int j)
 	// pre: 0 <= i,j < data.length
 	// post: data[i] and data[j] are exchanged
@@ -14,11 +14,8 @@ public class Sorts {
 	data[j] = temp;
 	}
 	
-	public Integer[] Gnome(Integer[] array) {
-		
-		return array;
-	}
-	 static void gnomeSort(int arr[], int n) 
+	
+	public static int[] gnomeSort(int arr[], int n) 
 	    { 
 	        int index = 0; 
 	  
@@ -35,19 +32,18 @@ public class Sorts {
 	                index--; 
 	            } 
 	        } 
-	        return; 
+	        return arr; 
 	    } 
 	
 	//Referencia: Java Structures: Data Structures for the Principled Programmer
-	public static void selectionSort(int data[], int n)
+	public static int[] selectionSort(int data[], int n)
 	// pre: 0 <= n <= data.length
 	// post: values in data[0..n-1] are in ascending order
 	{
 	int numUnsorted = n;
 	int index; // general index
 	int max; // index of largest value
-	while (numUnsorted > 0)
-	{
+	while (numUnsorted > 0){
 	// determine maximum value in array
 	max = 0;
 	for (index = 1; index < numUnsorted; index++)
@@ -57,7 +53,10 @@ public class Sorts {
 	swap(data,max,numUnsorted-1);
 	numUnsorted--;
 	}
+	return data;
 	}
+	
+	
 	private static void mergeSortRecursive(int data[],
 			int temp[],
 			int low, int high)
@@ -80,11 +79,15 @@ public class Sorts {
 			// merge halves together
 			merge(data,temp,low,middle,high);
 			}
-	public static void mergeSort(int data[], int n)
+	
+	
+	public static int[] mergeSort(int data[], int n)
 	// pre: 0 <= n <= data.length
 	// post: values in data[0..n-1] are in ascending order
 	{
 	mergeSortRecursive(data,new int[n],0,n-1);
+	
+	return data;
 	}
 	
 	private static void merge(int data[], int temp[],
@@ -131,10 +134,11 @@ public class Sorts {
 	}
 	}
 	
-	public static void quickSort(int data[], int n)
+	public static int[] quickSort(int data[], int n)
 	// post: the values in data[0..n-1] are in ascending order
 	{
 	quickSortRecursive(data,0,n-1);
+	return data;
 	}
 	private static void quickSortRecursive(int data[],int left,int right)
 	// pre: left <= right
@@ -156,6 +160,7 @@ public class Sorts {
 	if (d == 0) return n % 10;
 	else return digit(n/10,d-1);
 	}
+	
 	public static void bucketPass(int data[], int d)
 	// pre: data is an array of data values, and d >= 0
 	// post: data is sorted by the digit found in location d;
@@ -195,7 +200,7 @@ public class Sorts {
 	}
 	}
 	
-	public static void radixSort(int data[])
+	public static int[] radixSort(int data[])
 	// pre: data is array of values; each is less than 1,000,000
 	// post: data in the array are sorted into increasing order
 	{
@@ -203,6 +208,7 @@ public class Sorts {
 	{
 	bucketPass(data,i);
 	}
+	return data;
 	}
 	
 
