@@ -33,7 +33,7 @@ public class Profiler {
 			long startTime = System.nanoTime(); 
 			
 			//ordenador.gnomeSort(desordenado,desordenado.length);
-			//ordenador.selectionSort(desordenado,desordenado.length);
+			ordenador.selectionSort(desordenado,desordenado.length);
 			//ordenador.mergeSort(desordenado,desordenado.length);
 			//ordenador.quickSort(desordenado,desordenado.length);
 			//ordenador.gnomeSort(desordenado,desordenado.length);
@@ -42,7 +42,7 @@ public class Profiler {
 			//ordenador.selectionSort(ordenado,ordenado.length);
 			//ordenador.mergeSort(ordenado,ordenado.length);
 			//ordenador.quickSort(ordenado,ordenado.length);
-			ordenador.radixsort(ordenado,ordenado.length);
+			//ordenador.radixsort(ordenado,ordenado.length);
 			
 			long estimatedTime = System.nanoTime() - startTime;
 			System.out.println(estimatedTime);  
