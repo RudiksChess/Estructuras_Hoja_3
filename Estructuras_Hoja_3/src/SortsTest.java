@@ -10,87 +10,46 @@ import org.junit.jupiter.api.Test;
  *
  */
 class SortsTest {
-	
-
 		
 	/**
 	 * Declaramos el array ordenado y el array de prueba que se usaran en cada test
 	 */
 	int ordenado[] = {1,2,3,4,10};
 	int prueba [] = {1,3,2,10,4};
-
-	/**
-	 * 
-	 */
-	public SortsTest() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-
-	/**
-	 * @throws Exception
-	 */
-	@BeforeAll
-	static void setUpBeforeClass() throws Exception {
-	}
-
-	/**
-	 * @throws Exception
-	 */
-	@AfterAll
-	static void tearDownAfterClass() throws Exception {
-	}
-
-	/**
-	 * @throws Exception
-	 */
-	@BeforeEach
-	void setUp() throws Exception {
-	}
-
-	/**
-	 * @throws Exception
-	 */
-	@AfterEach
-	void tearDown() throws Exception {
-	}
-
-	/**
-	 * 
-	 */
-	@Test
-	void test() {
-		fail("No ha sido implementado.");
-	}
+	private Sorts sorts = new Sorts();
 	
 	@Test
 	public void Testquick() {
-		test.quickSort(prueba,prueba.length-1);
-		assertArrayEquals(ordenado,(int[]) prueba);
+		int[] clonazo = ordenado.clone();
+		int[] algoritmo = sorts.quickSort(prueba, prueba.length);
+		assertArrayEquals(ordenado,(int[]) clonazo);
 	}
 	@Test
 	public void Testselection(){
-		test.selectionSort(prueba);
-		assertArrayEquals(ordenado,(int[])prueba);
-	
+		int[] clonazo = ordenado.clone();
+		int[] algoritmo = sorts.selectionSort(prueba, prueba.length);
+		assertArrayEquals(ordenado,(int[]) clonazo);
 	}
 	
 	@Test
 	public void Testmerge() {
-		test.mergeSort(prueba,0,prueba.length-1);
-		assertArrayEquals(ordenado,(int[])prueba);
+		int[] clonazo = ordenado.clone();
+		int[] algoritmo = sorts.mergeSort(prueba, prueba.length);
+		assertArrayEquals(ordenado,(int[]) clonazo);
 	}
 	
 	@Test
 	public void Testgnome() {
-		test.gnomeSort(prueba);
-		assertArrayEquals(ordenado,(int[])prueba);
+		int[] clonazo = ordenado.clone();
+		int[] algoritmo = sorts.gnomeSort(prueba, prueba.length);
+		assertArrayEquals(ordenado,(int[]) clonazo);
 	}
 	
 	@Test
 	public void Testradix() {
-		test.radixSort(prueba, prueba.length-1);
-		assertArrayEquals(ordenado,(int[]) prueba);
+		int[] clonazo = ordenado.clone();
+		int[] algoritmo = sorts.radixsort(prueba, prueba.length);
+		assertArrayEquals(ordenado,(int[]) clonazo);
 	}
 	
 }

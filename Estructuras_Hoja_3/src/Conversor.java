@@ -2,6 +2,10 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class Conversor {
+	/**
+	 * Algoritmo para crear una lista de datos.txt
+	 * @param lista un array para crear un archivo .txt
+	 */
 	public void Convertir_CSV(int[] lista) {
 		FileWriter writer;
 		try {

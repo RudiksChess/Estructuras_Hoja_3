@@ -2,6 +2,11 @@ import java.util.Random;
 import java.util.stream.IntStream;
 
 public class Profiler {
+	/**
+	 * Algoritmo para generar una lista de números aleatorios
+	 * @param numero un numero entero al array para la cantidad de datos necesarios en la lista
+	 * @return un array de enteros aleatorio en un rango seleccionado
+	 */
 	
 	public int[] Generador(int numero) {
 		//Se crea un array de 3000 elementos de 0 a 2999
