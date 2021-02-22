@@ -1,10 +1,21 @@
-
 import java.util.Arrays;
 import java.util.Vector; 
 
+/**
+ * @author loren
+ *
+ */
 public class Sorts {
+	
+	
 
-	//Se usarï¿½ dentro de los sorts
+	//Se usara dentro de los sorts
+	/**
+	 * Este metodo intercambia la informacion de dos posiciones de un array de enteros
+	 * @param data
+	 * @param i
+	 * @param j
+	 */
 	public static void swap(int data[], int i, int j)
 	// pre: 0 <= i,j < data.length
 	// post: data[i] and data[j] are exchanged
@@ -16,6 +27,12 @@ public class Sorts {
 	}
 	
 	
+	/**
+	 * Algoritmo de  Gnome Sort 
+	 * @param arr
+	 * @param n
+	 * @return un array de enteros ordenado
+	 */
 	public static int[] gnomeSort(int arr[], int n) 
 	    { 
 	        int index = 0; 
@@ -37,6 +54,11 @@ public class Sorts {
 	    } 
 	
 	//Referencia: Java Structures: Data Structures for the Principled Programmer
+	/** Algoritmo de Selection Sort
+	 * @param data
+	 * @param n
+	 * @return un array de enteros ordenado
+	 */
 	public static int[] selectionSort(int data[], int n)
 	// pre: 0 <= n <= data.length
 	// post: values in data[0..n-1] are in ascending order
@@ -57,7 +79,14 @@ public class Sorts {
 	return data;
 	}
 	
-	
+	//Referencia: Java Structures: Data Structures for the Principled Programmer
+	/**
+	 * Algoritmo auxiliar del algoritmo de Merge Sort
+	 * @param data
+	 * @param temp
+	 * @param low
+	 * @param high
+	 */
 	private static void mergeSortRecursive(int data[],
 			int temp[],
 			int low, int high)
@@ -81,7 +110,13 @@ public class Sorts {
 			merge(data,temp,low,middle,high);
 			}
 	
-	
+	//Referencia: Java Structures: Data Structures for the Principled Programmer
+	/**
+	 * Algoritmo merge sort
+	 * @param data
+	 * @param n
+	 * @return un array de enteros ordenado
+	 */
 	public static int[] mergeSort(int data[], int n)
 	// pre: 0 <= n <= data.length
 	// post: values in data[0..n-1] are in ascending order
@@ -90,7 +125,14 @@ public class Sorts {
 	
 	return data;
 	}
-	
+	//Referencia: Java Structures: Data Structures for the Principled Programmer
+	/**
+	 * @param data
+	 * @param temp
+	 * @param low
+	 * @param middle
+	 * @param high
+	 */
 	private static void merge(int data[], int temp[],
 			int low, int middle, int high)
 			// pre: data[middle..high] are ascending
@@ -117,7 +159,13 @@ public class Sorts {
 			// ...or some values left (in correct place) in data array
 			}
 	
-	
+	//Referencia: Java Structures: Data Structures for the Principled Programmer
+	/**
+	 * @param data
+	 * @param left
+	 * @param right
+	 * @return un array de enteros ordenado
+	 */
 	private static int partition(int data[], int left, int right)
 	// pre: left <= right
 	// post: data[left] placed in the correct (returned) location
@@ -134,13 +182,24 @@ public class Sorts {
 	else return right;
 	}
 	}
-	
+	//Referencia: Java Structures: Data Structures for the Principled Programmer
+	/**
+	 * @param data
+	 * @param n
+	 * @return
+	 */
 	public static int[] quickSort(int data[], int n)
 	// post: the values in data[0..n-1] are in ascending order
 	{
 	quickSortRecursive(data,0,n-1);
 	return data;
 	}
+	//Referencia: Java Structures: Data Structures for the Principled Programmer
+	/**
+	 * @param data
+	 * @param left
+	 * @param right
+	 */
 	private static void quickSortRecursive(int data[],int left,int right)
 	// pre: left <= right
 	// post: data[left..right] in ascending order
@@ -153,7 +212,13 @@ public class Sorts {
 	/* done! */
 	}
 	
-	//CÃ³digo de GeeksForGeeks https://www.geeksforgeeks.org/radix-sort/
+	//Código de GeeksForGeeks https://www.geeksforgeeks.org/radix-sort/
+	/**
+	 * Encuentra el maximo dentro de un array de enteros
+	 * @param arr
+	 * @param n
+	 * @return la entrada de maximo valor
+	 */
 	static int getMax(int arr[], int n) 
     { 
         int mx = arr[0]; 
@@ -163,10 +228,15 @@ public class Sorts {
         return mx; 
     } 
   
-	//CÃ³digo de GeeksForGeeks https://www.geeksforgeeks.org/radix-sort/
+	//Código de GeeksForGeeks https://www.geeksforgeeks.org/radix-sort/
     // A function to do counting sort of arr[] according to 
     // the digit represented by exp. 
-     public static void countSort(int arr[], int n, int exp) 
+     /**
+     * @param arr
+     * @param n
+     * @param exp
+     */
+    public static void countSort(int arr[], int n, int exp) 
     { 
         int output[] = new int[n]; // output array 
         int i; 
@@ -193,9 +263,14 @@ public class Sorts {
         for (i = 0; i < n; i++) 
             arr[i] = output[i]; 
     } 
-   //CÃ³digo de GeeksForGeeks https://www.geeksforgeeks.org/radix-sort/
+   //Código de GeeksForGeeks https://www.geeksforgeeks.org/radix-sort/
     // The main function to that sorts arr[] of size n using 
     // Radix Sort 
+    /**
+     * @param arr
+     * @param n
+     * @return
+     */
     public static int[] radixsort(int arr[], int n) 
     { 
         // Find the maximum number to know number of digits 
