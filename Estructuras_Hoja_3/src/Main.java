@@ -60,6 +60,10 @@ public class Main {
 					conversor.Convertir_CSV(ordenado);
 				}
 				
+				else {
+					System.out.println("El programa se ha cerrado. Valor desconocido.");
+				}
+				
 			}
 
 			else{
