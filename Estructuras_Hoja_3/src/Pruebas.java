@@ -10,7 +10,7 @@ public class Pruebas {
 		System.out.println(Arrays.toString(ordenador.selectionSort(arr,arr.length)));
 		System.out.println(Arrays.toString(ordenador.mergeSort(arr,arr.length)));
 		System.out.println(Arrays.toString(ordenador.quickSort(arr,arr.length)));
-		System.out.println(Arrays.toString(ordenador.radixSort(arr)));
+		System.out.println(Arrays.toString(ordenador.bubbleSort(arr)));
 	}
 
 }
